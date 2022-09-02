@@ -1,43 +1,71 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
 
-const productSchema = Schema({
-  productCode: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  imagePath: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  price: {
-    type: Number,
-    required: true,
-  },
-  category: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Category",
-  },
-  manufacturer: {
-    type: String,
-  },
-  available: {
-    type: Boolean,
-    required: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
 
-module.exports = mongoose.model("Product", productSchema);
+
+const reviewschema = mongoose.Schema({
+
+    userid:{
+        type:mongoose.Schema.Types.ObjectId
+    } ,
+    name:{
+        type:String ,
+        require :true
+    } ,
+    comment:{
+        type:Number
+    } ,
+    rating:{
+        type:Number ,
+        require:true
+    }
+
+
+} , {
+    timestamps:true
+} )
+
+
+const ProductSchema = mongoose.Schema(
+    {
+        name :{
+            type:String ,
+            require:true
+        } ,
+        image:{
+            type:String ,
+            require:true
+        },
+        category:{
+            type:String ,
+            require:true
+        }
+         ,
+         description:{
+            type:String ,
+            require:true
+        } ,
+        price:{
+            type:Number ,
+            require : true
+        } ,
+        countInStock:{
+            type:Number ,
+            require:true 
+        } ,
+        rating:{
+            type:Number ,
+            require:true ,
+            default :0
+        } ,
+        reviews:[reviewschema]
+    } 
+    
+    , {
+        timestamps:true
+    }
+)
+
+
+const Product = mongoose.model('product' , ProductSchema)
+
+module.exports = Product

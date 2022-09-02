@@ -1,0 +1,26 @@
+.gridstyle
+{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    
+}
+
+
+
+#img1{
+    width: 100%;
+}
+
+#refrence
+{
+    margin: 30px;
+
+    background-color: rgb(35, 136, 10);
+    color: white;
+padding: 15px;
+padding-left: 29px;
+padding-right: 29px;
+    border-radius: 20px;
+
+    font-size: 50px;
+}

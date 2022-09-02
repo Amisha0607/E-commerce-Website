@@ -1,0 +1,94 @@
+.stylebar
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.grid
+{
+    display: grid;
+    grid-template-columns: auto auto ;
+   
+   
+}
+
+.grid2
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+   
+   margin-left: 10%;
+}
+
+#boxbar
+{
+    color: white;
+    background-color: rgb(75, 75, 75);
+    width: 80%;
+    margin: auto;
+    margin-left: 10%;
+    padding:2%;
+    border-radius: 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+li{
+    color: white;
+    font-size: large;
+   
+}
+
+.stylebar:hover
+{
+    background-color: #BADFE7;
+    padding: 15px;
+    border-radius: 25px;
+}
+.stylebar:focus{
+    background-color: #BADFE7;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.makebig
+{
+    padding: 20px;
+   
+    background-color:    #388087;
+}
+
+#ttt
+{
+    font-weight: 900;
+    font-style: initial;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+
+
+@media screen and (max-width:500px) {
+
+    .grid
+{
+    display: block;
+   
+    
+   
+   
+}
+
+.stylebar{
+    display: block;
+}
+
+    
+}
